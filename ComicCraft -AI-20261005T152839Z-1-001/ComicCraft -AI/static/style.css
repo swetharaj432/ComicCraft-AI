@@ -1,0 +1,667 @@
+/* =========================================================
+   COMICCRAFT - MAIN STYLESHEET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #292929 0%,
+            #151515 45%,
+            #090909 100%
+        );
+
+    color: #ffffff;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(1100px, 92%);
+
+    margin: 0 auto;
+
+    padding:
+        50px
+        0
+        80px;
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: clamp(
+        42px,
+        7vw,
+        72px
+    );
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 12px;
+
+    color: #ffffff;
+}
+
+.subtitle {
+    color: #bdbdbd;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+form {
+    background: rgba(
+        255,
+        255,
+        255,
+        0.07
+    );
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+label {
+    display: block;
+
+    margin-top: 22px;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.16
+    );
+
+    background: rgba(
+        0,
+        0,
+        0,
+        0.35
+    );
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* =========================================================
+   SELECT OPTIONS
+   ========================================================= */
+
+select option {
+    background: #171717;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+
+    border-color: #ffffff;
+
+    background: rgba(
+        0,
+        0,
+        0,
+        0.5
+    );
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+textarea {
+    min-height: 160px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CHARACTER COUNTER
+   ========================================================= */
+
+small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #999999;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+button {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 16px 22px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   LOADING MESSAGE
+   ========================================================= */
+
+.loading {
+    margin-top: 22px;
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+    color: #dddddd;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.error {
+    margin-bottom: 25px;
+
+    padding: 18px 20px;
+
+    border-radius: 14px;
+
+    background: rgba(
+        160,
+        20,
+        20,
+        0.25
+    );
+
+    border: 1px solid rgba(
+        255,
+        100,
+        100,
+        0.25
+    );
+
+    color: #ffcccc;
+
+    line-height: 1.6;
+}
+
+.error strong {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   COMIC PANEL
+   ========================================================= */
+
+.panel {
+    margin: 25px 0;
+
+    padding: 30px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.07
+    );
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(
+            0,
+            0,
+            0,
+            0.3
+        );
+}
+
+
+/* =========================================================
+   PANEL HEADING
+   ========================================================= */
+
+.panel h2 {
+    margin-bottom: 22px;
+
+    font-size: 25px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   IDEA / SCENE BOX
+   ========================================================= */
+
+.panel-text {
+    line-height: 1.8;
+
+    color: #d7d7d7;
+}
+
+
+/* =========================================================
+   TEXT ITEMS
+   ========================================================= */
+
+.panel-text p {
+    margin-bottom: 16px;
+
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    background: rgba(
+        0,
+        0,
+        0,
+        0.22
+    );
+
+    border-left: 3px solid #ffffff;
+}
+
+
+/* =========================================================
+   TEXT LABELS
+   ========================================================= */
+
+.panel-text strong {
+    display: inline-block;
+
+    margin-right: 6px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.panel img {
+    display: block;
+
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: contain;
+
+    margin-bottom: 25px;
+
+    border-radius: 16px;
+
+    background: #111111;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+
+.download,
+.secondary {
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.download {
+    background: #ffffff;
+
+    color: #111111;
+}
+
+
+.secondary {
+    background: #444444;
+
+    color: #ffffff;
+}
+
+
+.download:hover,
+.secondary:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   IDEA BADGE
+   ========================================================= */
+
+.idea-badge {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.1
+    );
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.15
+    );
+
+    color: #cccccc;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+
+        padding-top: 30px;
+
+        padding-bottom: 50px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    form {
+        padding: 22px;
+
+        border-radius: 18px;
+    }
+
+    .panel {
+        padding: 22px;
+
+        border-radius: 18px;
+    }
+
+    .panel h2 {
+        font-size: 21px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .download,
+    .secondary {
+        width: 100%;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 15px;
+    }
+}

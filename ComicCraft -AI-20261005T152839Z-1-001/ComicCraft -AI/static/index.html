@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        ComicCraft - AI Comic Creator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="hero">
+
+        <h1>
+            ComicCraft
+        </h1>
+
+        <p class="subtitle">
+            <b>AI Comic Story Creator using
+            Gemini</b>
+        </p>
+
+    </div>
+
+
+    {% if error %}
+
+    <div class="error">
+
+        <strong>
+            Generation failed:
+        </strong>
+
+        <p>
+            {{ error }}
+        </p>
+
+    </div>
+
+    {% endif %}
+
+
+    <form
+        id="comicForm"
+        action="/generate"
+        method="post"
+    >
+
+        <label for="storyPrompt">
+            Story Prompt
+        </label>
+
+        <textarea
+            id="storyPrompt"
+            name="story_prompt"
+            placeholder="Example: A young inventor discovers a mysterious robot in an abandoned laboratory."
+            maxlength="5000"
+            required
+        ></textarea>
+
+        <small id="promptCount">
+            0 / 5000 characters
+        </small>
+
+
+        <label for="characterName">
+            Main Character Name
+        </label>
+
+        <input
+            type="text"
+            id="characterName"
+            name="character_name"
+            placeholder="Example: Arjun"
+            maxlength="100"
+            required
+        >
+
+
+        <label for="setting">
+            Setting
+        </label>
+
+        <select
+            id="setting"
+            name="setting"
+        >
+
+            <option>
+                Forest
+            </option>
+
+            <option>
+                School
+            </option>
+
+            <option>
+                City
+            </option>
+
+            <option>
+                Space
+            </option>
+
+            <option>
+                Fantasy Kingdom
+            </option>
+
+            <option>
+                Future Laboratory
+            </option>
+
+        </select>
+
+
+        <label for="tone">
+            Story Tone
+        </label>
+
+        <select
+            id="tone"
+            name="tone"
+        >
+
+            <option>
+                Funny
+            </option>
+
+            <option>
+                Light-hearted
+            </option>
+
+            <option>
+                Dramatic
+            </option>
+
+            <option>
+                Adventure
+            </option>
+
+            <option>
+                Poetic
+            </option>
+
+        </select>
+
+
+        <label for="artStyle">
+            Art Style
+        </label>
+
+        <select
+            id="artStyle"
+            name="art_style"
+        >
+
+            <option>
+                Anime
+            </option>
+
+            <option>
+                Comic Book
+            </option>
+
+            <option>
+                Pixel Art
+            </option>
+
+            <option>
+                Realistic
+            </option>
+
+            <option>
+                Watercolor
+            </option>
+
+        </select>
+
+
+        <div
+            id="loadingMessage"
+            class="loading"
+            hidden
+        >
+
+            Creating your
+            5-panel comic...
+
+            <br>
+
+            Please wait while AI generates
+            your story and images.
+
+        </div>
+
+
+        <button
+            id="generateButton"
+            type="submit"
+        >
+
+            Create My Comic
+
+        </button>
+
+    </form>
+
+</div>
+
+
+<script
+    src="/static/script.js"
+></script>
+
+</body>
+
+</html>

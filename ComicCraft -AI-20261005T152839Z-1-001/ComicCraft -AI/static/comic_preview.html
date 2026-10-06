@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Your Comic - ComicCraft
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="hero">
+
+        <h1>
+            Your Comic
+        </h1>
+
+        <p class="subtitle">
+            AI-generated comic story and visual ideas
+        </p>
+
+    </div>
+
+
+    {% for panel in layout %}
+
+    <section class="panel">
+
+        <div class="panel-number">
+            PANEL {{ panel.panel_number }}
+        </div>
+
+        <h2>
+            {{ panel.title }}
+        </h2>
+
+
+        <div class="idea-box">
+
+            <h3>
+                🎬 Scene
+            </h3>
+
+            <p>
+                {{ panel.scene }}
+            </p>
+
+        </div>
+
+
+        <div class="idea-box">
+
+            <h3>
+                💬 Dialogue
+            </h3>
+
+            <p>
+                "{{ panel.dialogue }}"
+            </p>
+
+        </div>
+
+
+        <div class="idea-box">
+
+            <h3>
+                🎨 Visual Idea
+            </h3>
+
+            <p>
+                {{ panel.visual_idea }}
+            </p>
+
+        </div>
+
+
+        <div class="details-grid">
+
+            <div>
+
+                <strong>
+                    Character Expression
+                </strong>
+
+                <p>
+                    {{ panel.character_expression }}
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Background
+                </strong>
+
+                <p>
+                    {{ panel.background }}
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Camera Angle
+                </strong>
+
+                <p>
+                    {{ panel.camera_angle }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="image-prompt">
+
+            <h3>
+                🖼️ Image Generation Idea
+            </h3>
+
+            <p>
+                {{ panel.image_prompt }}
+            </p>
+
+        </div>
+
+    </section>
+
+    {% endfor %}
+
+
+    <div class="actions">
+
+        <a
+            class="download"
+            href="{{ pdf_url }}"
+            download
+        >
+            Download Comic PDF
+        </a>
+
+
+        <a
+            class="secondary"
+            href="/"
+        >
+            Create Another Comic
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

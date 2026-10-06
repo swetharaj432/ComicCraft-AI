@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+google-genai
+Pillow
+fpdf2
+jinja2
+pydantic
